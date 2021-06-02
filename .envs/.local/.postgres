@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=todo_app
+POSTGRES_USER=yQKPpDWirPQcPzNRtoLdJdkvTXmktiOY
+POSTGRES_PASSWORD=1bKeu7zO7rcD0nesLCOKeJxV5jJj1Pbbws49M4JrNVjUr3OwyjsBhISilCgeIjSU
