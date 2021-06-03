@@ -34,9 +34,9 @@ In real world, backend and frontend might be stored in separate git repositories
 ## Backend notes
 
 - Django Rest Framework is used for REST API
-- I haven't implemented auth/Users yet, but hopefully I will have enough time to finish that. In the meantime, all REST API endpoints have AllowAny permissions configured to make this app usable without auth.
+- I haven't implemented auth/Users yet, but hopefully I will have enough time to finish that. In the meantime, all REST API endpoints have AllowAny permissions configured to make this app usable without auth
 - I decided that handling item reordering is an overkill for this project, hence by default all models are ordered by id
-- Pagination is implemented for lists (ListContainer model). Number of lists per page is set to 3, so that it doesn't take too much typing before you can see pagination in action.
+- Pagination is implemented for lists (ListContainer model). Number of lists per page is set to 3, so that it doesn't take too much typing before you can see pagination in action
 - Lists and items have separate endpoints in this project, but this could have been implemented in a few different ways:
   - Endpoint for items could have been nested within lists endpoint, i.e.: 'lists/{id}/items'
   - Items could have been handled as a field of lists, without a separate items endpoint. However, this would makes List serializer more complex for item creation, patching and removing
