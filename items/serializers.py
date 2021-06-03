@@ -2,13 +2,15 @@ from rest_framework import serializers
 from .models import ListContainer, ListItem
 
 
-class ListContainerSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ListContainer
-        fields = ['name']
-
-
-class ListItemSerializers(serializers.ModelSerializer):
+class ListItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = ListItem
-        fields = ['parent', 'name']
+        fields = ['id', 'parent', 'name', 'done']
+
+
+class ListContainerSerializer(serializers.ModelSerializer):
+    items = ListItemSerializer(many=True, required=False)
+
+    class Meta:
+        model = ListContainer
+        fields = ['id', 'name', 'items']
