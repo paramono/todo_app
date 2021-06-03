@@ -5,6 +5,20 @@ volumes:
   local_postgres_data_backups: {}
 
 services:
+  frontend:
+    # image: node:10.15.1
+    build:
+      context: .
+      dockerfile: ./compose/local/nuxt/Dockerfile
+    image: todo_app_local_nuxt
+    container_name: nuxt
+    volumes:
+      - .:/nuxt:z
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.envs/.local/.nuxt
+
   django:
     build:
       context: .
