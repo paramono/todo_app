@@ -1,4 +1,4 @@
-# Todo test project
+# Todo test project for data-cubed.co.uk
 
 Task: build a simple todo list web app using Django and Nuxt, it should support the following:
 
@@ -42,10 +42,9 @@ In real world, backend and frontend might be stored in separate git repositories
   - Items could have been handled as a field of lists, without a separate items endpoint. However, this would makes List serializer more complex for item creation, patching and removing
 - List serializer (ListContainerSerializer) returns all its items through a nested ListItemSerializer
 
-
 ## Frontend notes
 
 - pug is used to make markup more readable
-- bootstrap-vue is used, since it's relevant to your company project.
+- bootstrap-vue is used, since it's relevant to the stack used by your company
 - UI/UX is fairly basic, just showing how I would handle nuxt/vue
 - List/item name is updated on input with debouncing
