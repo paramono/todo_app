@@ -6,7 +6,6 @@ div
 
 <script>
 import ListContainers from '~/components/ListContainers'
-// import ListContainer from '~/components/ListContainer'
 
 export default {
   watchQuery: true,
@@ -17,21 +16,5 @@ export default {
       return !isNaN(page) ? page : 1
     }
   }
-  // async asyncData({ query, params, $axios }) {
-  //   const res = await $axios.get('containers', {
-  //     params,
-  //     // paramsSerializer: function (params) {
-  //     //   return qs.stringify(params, { arrayFormat: 'repeat' })
-  //     // },
-  //   })
-
-  //   console.log(res.data)
-
-  //   return {
-  //     page: parseInt(query.page) || 1,
-  //     results: res.data.results,
-  //     total: res.data.count,
-  //   }
-  // },
 }
 </script>
