@@ -14,9 +14,14 @@ class NameMixin(models.Model):
 
 class ListContainer(NameMixin):
     # owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    pass
+    class Meta:
+        ordering = ['pk']
 
 
 class ListItem(NameMixin):
-    parent = models.ForeignKey('ListContainer', on_delete=models.CASCADE)
+    parent = models.ForeignKey('ListContainer', related_name='items',
+                               on_delete=models.CASCADE)
     done = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['pk']
